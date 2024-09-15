@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../fontawesome-all.css">
     <link rel="stylesheet" href="../materialdesignicons.min.css">
-
     <title>Warehouse</title>
 </head>
 
@@ -165,14 +164,13 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Inventory</h2>
+                                <h2 class="pageheader-title">Receiving</h2>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#"
-                                                    class="breadcrumb-link">Dashboard</a>
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Receive</a>
                                             </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Add Item</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Create Order</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -182,46 +180,57 @@
                     <!-- ============================================================== -->
                     <!-- end pageheader  -->
                     <!-- ============================================================== -->
-                    <div class="col-xl-4 col-md-12 col-sm-12 col-12">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header text-light" style="background-color:rgba(113,99,186,255)">Register
-                                New Item</h5>
-                            <div class="card-body bg-primary-light">
-                                <form class="needs-validation" novalidate>
+                            <h5 class="card-header">Basic Form</h5>
+                            <div class="card-body">
+                                <form action="#" id="basicform" data-parsley-validate="">
+                                    <div class="form-group">
+                                        <label for="inputUserName">User Name</label>
+                                        <input id="inputUserName" type="text" name="name" data-parsley-trigger="change"
+                                            required="" placeholder="Enter user name" autocomplete="off"
+                                            class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail">Email address</label>
+                                        <input id="inputEmail" type="email" name="email" data-parsley-trigger="change"
+                                            required="" placeholder="Enter email" autocomplete="off"
+                                            class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword">Password</label>
+                                        <input id="inputPassword" type="password" placeholder="Password" required=""
+                                            class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputRepeatPassword">Repeat Password</label>
+                                        <input id="inputRepeatPassword" data-parsley-equalto="#inputPassword"
+                                            type="password" required="" placeholder="Password" class="form-control">
+                                    </div>
                                     <div class="row">
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                            <label for="validationCustom01">Item description</label>
-                                            <input type="text" class="form-control" id="validationCustom01"
-                                                placeholder="Item name" value="ผ้า" required>
-                                            <div class="valid-feedback">
-                                            </div>
+                                        <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
+                                            <label class="be-checkbox custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input"><span
+                                                    class="custom-control-label">Remember me</span>
+                                            </label>
                                         </div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                            <label for="validationCustom02">Item code</label>
-                                            <input type="text" class="form-control" id="validationCustom02"
-                                                placeholder="Last name" value="D001" required>
-                                        </div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-4">
-                                            <button class="btn btn-primary" type="submit">Submit form</button>
+                                        <div class="col-sm-6 pl-0">
+                                            <p class="text-right">
+                                                <button type="submit" class="btn btn-space btn-primary">Submit</button>
+                                                <button class="btn btn-space btn-secondary">Cancel</button>
+                                            </p>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
+
+
                     <!-- ============================================================== -->
                     <!-- end validation form -->
                     <!-- ============================================================== -->
                 </div>
-
-
-
-
-
-
-
-
-
             </div>
         </div>
     </div>
@@ -257,7 +266,6 @@
     <script src="../bootstrap/js/bootstrap.bundle.js"></script>
     <!-- slimscroll js -->
     <script src="../jquery.slimscroll.js"></script>
-
 </body>
 
 </html>

@@ -22,7 +22,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/materialdesignicons.min.css"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
@@ -89,7 +90,9 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.css",
+              "../../assets/styles.css",
+              "src/assets/materialdesignicons.min.css"
             ],
             "scripts": []
           }

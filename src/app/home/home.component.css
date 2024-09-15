@@ -1,11 +1,10 @@
 /* From Uiverse.io by ozgeozkaraa01 */ 
 @import '../bootstrap/css/bootstrap.min.css';
-/* @import '../../styles.css'; */
-/* @import '../fonts/circular-std/style.css';
+@import '../../styles.css';
+@import '../fonts/circular-std/style.css';
 @import '../../../src/app/fonts/fontawesome/css/fontawesome-all.css';
-@import '../../app/fonts/material-design-iconic-font/css/materialdesignicons.min.css'; */
-/* @import '../bootstrap/css/materialdesignicons.min.css'; */
-/* @import '../../../src/app/fontawesome-all.css'; */
+@import '../../app/fonts/material-design-iconic-font/css/materialdesignicons.min.css';
+
 .group {
     display: flex;
     line-height: 30px;

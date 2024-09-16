@@ -67,7 +67,7 @@
     <!-- ============================================================== -->
     <!-- left sidebar -->
     <!-- ============================================================== -->
-    <div class="nav-left-sidebar sidebar-dark">
+    <div class="nav-left-sidebar ">
       <div class="menu-list">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="d-xl-none d-lg-none" href="#"></a>
@@ -76,66 +76,34 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav flex-column">
-              <li class="nav-divider">
-                Menu
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
-                  data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard
-                  <span class="badge badge-success">6</span></a>
-                <div id="submenu-1" class="collapse submenu">
-                  <ul class="nav flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link" href="../home/home.component.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../item-details/item-details.component.html">Item
-                        Details</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../add-item/add-item.component.html">Add New
-                        Item</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4"
-                  aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Receive</a>
-                <div id="submenu-4" class="collapse submenu">
-                  <ul class="nav flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link" href="../receiving/receiving.component.html">Create
-                        Order</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../incoming-order/incoming-order.component.html">Incoming
-                        Order</a>
+            <div class="sidebar " [class.sidebar-close]="!openSidebar">
+              <div class="logo-details">
+                <div class="logo"></div>
+              </div>
+              <ul class="nav-links" id="nav-links">
+                <li *ngFor="let item of menuSidebar" #itemEl routerLinkActive="active">
+                  <div *ngIf="item.sub_menu.length == 0" class="dropdown-title">
+                    <a [routerLink]="[item.link]">
+                      <i [class]="item.icon"></i>
+                      <span class="link_name">{{item.link_name}}</span>
+                    </a>
+                  </div>
+                  <div *ngIf="item.sub_menu.length > 0" class="dropdown-title" (click)="showSubmenu(itemEl)">
+                    <a>
+                      <i [class]="item.icon"></i>
+                      <span class="link_name">{{item.link_name}}</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                  </div>
+                  <ul class="sub-menu" [class.blank]="item.sub_menu.length == 0">
+                    <li><a class="link_name">{{item.link_name}}</a></li>
+                    <li *ngFor="let item_sub of item.sub_menu" routerLinkActive="active">
+                      <a [routerLink]="[item_sub.link]">{{item_sub.link_name}}</a>
                     </li>
                   </ul>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5"
-                  aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Production</a>
-                <div id="submenu-5" class="collapse submenu">
-                  <ul class="nav flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link" href="../issuing/issuing.component.html">Issuing</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../create-issue-order/create-issue-order.component.html">Create
-                        issue order</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../issue-order-list/issue-order-list.component.html">production
-                        order</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </div>
@@ -431,11 +399,11 @@
 
   <!-- Optional JavaScript -->
   <!-- jquery 3.3.1 -->
-  <script src="../jquery-3.3.1.min.js"></script>
+  <!-- <script src="src/app/bootstrap/js/jquery.slimscroll.js"></script> -->
   <!-- bootstap bundle js -->
-  <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+  <!-- <script src="../bootstrap/js/bootstrap.bundle.js"></script> -->
   <!-- slimscroll js -->
-  <script src="../jquery.slimscroll.js"></script>
+  <!-- <script src="../bootstrap/js/jquery-3.3.1.min.js"></script> -->
 
 </body>
 

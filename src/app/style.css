@@ -226,11 +226,6 @@ a:hover {
     text-decoration: none;
 }
 
-ol,
-ul {}
-
-ol li,
-ul li {}
 
 .lead {
     font-size: 1.25rem;
@@ -5959,7 +5954,7 @@ Vertical Timeline - by CodyHouse.co
     position: relative;
 }
 
-.aside-header {}
+
 
 .aside-header .navbar-toggle {
     background: 0 0;
@@ -6471,9 +6466,6 @@ Vertical Timeline - by CodyHouse.co
     height: calc(100vh - 105px);
 }
 
-.dashboard-main-wrapper .content-container>.chat-module {
-    /*height: 100%;*/
-}
 
 .dashboard-main-wrapper .content-container>.chat-module {
     overflow: hidden;

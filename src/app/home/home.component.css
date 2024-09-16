@@ -4,3 +4,7 @@
 @import '../fonts/circular-std/style.css';
 @import '../../../src/app/fonts/fontawesome/css/fontawesome-all.css';
 @import '../../app/fonts/material-design-iconic-font/css/materialdesignicons.min.css';
+@import '../jquery-3.3.1.min.js';
+@import '../bootstrap/js/bootstrap.bundle.js';
+@import '../jquery.slimscroll.js'; 
+
